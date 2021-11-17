@@ -1,0 +1,88 @@
+<%- include('partials/header') %>
+<div class="container mt-5">
+  <h1>Register</h1>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="card">
+        <div class="card-body">
+
+          <!-- Makes POST request to /register route -->
+          <form action="/" method="POST">
+            <div class="form-group">
+              <label for="email">Full name</label>
+              <input type="text" class="form-control" name="uname">
+            </div>
+            <div class="form-group">
+                <label for="PRN">PRN</label>
+                <input type="text" class="form-control" name="email">
+              </div>
+              <div class="form-group">
+                <label for="Breanch">class</label>
+                <select class="form-control" name="branch" required>
+                    <option value="First">Computer Engineering </option>
+                    <option value="Second">Inforamation Technology Engineering</option>
+                    <option value="Second">Electronics Engineering</option>
+                    <option value="Second">Mechanical Engineering</option>
+                    <option value="Second">Electrical Engineering</option>
+                    <option value="Second">Civil Engineering</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="Year">Year</label>
+                <select class="form-control" name="year">
+                    <option value="First">First Year</option>
+                    <option value="Second">Second Year</option>
+                    <option value="Second">Third Year</option>
+                    <option value="Second">Fourth Year</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="vaccine">Vaccine</label>
+                <select class="form-control" name="vaccine">
+                    <option value="Covishield">Covishield</option>
+                    <option value="Covaxine">Covaxine</option>
+                    <option value="Sputnik">Sputnik</option>
+                    <
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="Dose">First Dose</label>
+                <select class="form-control" name="fd" required>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="Dose">Second Dose</label>
+                <select class="form-control" name="sd" required>
+                    <option value="true">Yes</option>
+                    <option value="false">No</option>
+                </select>
+              </div>
+
+            <button type="submit" class="btn btn-dark">Add</button>
+            
+          </form>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-sm-4">
+      <div class="card social-block">
+        <div class="card-body">
+          <a class="btn btn-block" href="/auth/google" role="button">
+            <i class="fab fa-google"></i>
+            Sign Up with Google
+          </a>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</div>
+
+<%- include('partials/header') %>

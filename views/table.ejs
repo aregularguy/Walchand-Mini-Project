@@ -1,0 +1,75 @@
+<%- include('partials/header') %>
+
+
+    <table class="table table-striped table-primary">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>PRn Number</th>
+                <th>Branch</th>
+                <th>Year</th>
+                <th>Vaccine Name</th>
+                <th>FirstDose</th>
+                <th>SecondDose</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <%if (data.length>0){ %>
+                <% for(var i=0; i<data.length; i++){ %>
+                    <tr>
+                        <td>
+                            <%= data[i].FullName %>
+                        </td>
+                        <td>
+                            <%= data[i].Prn %>
+                        </td>
+                        <td>
+                            <%= data[i].Branch %>
+                        </td>
+                        <td>
+                            <%= data[i].Year %>
+                        </td>
+                        <td>
+                            <%= data[i].Vaccine %>
+                        </td>
+                        <td>
+                            <%= data[i].FirstDose %>
+                        </td>
+                        <td>
+                            <%= data[i].SecondDose %>
+                        </td>
+
+                    </tr>
+                    <% }}else{ %>
+                        <tr>
+                            <td colspan="6">No Record Found</td>
+
+                        </tr>
+                        <% } %>
+        </tbody>
+    </table>
+
+    <!-- <div>
+    <ul>
+    <% for(var i=0; i<data.length; i++) {%>
+        <li><%= data[i].FullName %></li>
+        <li><%= data[i].Prn %></li>
+        <li><%= data[i].Branch %></li>
+        <li><%= data[i].Year %></li>
+        <li><%= data[i].FirstDose %></li>
+        <li><%= data[i].SecondDose %></li>
+        <li><%= data[i].fb_Id %></li>
+        <li><%= data[i].jobTitle %></li>
+    <% } %>
+    </ul>
+</div> -->
+
+
+
+
+
+
+
+
+    <%- include('partials/header') %>
