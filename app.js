@@ -12,7 +12,7 @@ const passportLocalMongoose = require("passport-local-mongoose");
 const adddata = require('./models/main')
 const app = express();
 
-app.use(express.static("public"));
+app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
   extended: true
@@ -40,7 +40,8 @@ mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true },(
 const userSchema = new mongoose.Schema({
   email: String,
   password: String,
-  isAdmin: Boolean
+  isAdmin: Boolean,
+  verified:Boolean
 });
 
 userSchema.plugin(passportLocalMongoose);
